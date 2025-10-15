@@ -1,0 +1,40 @@
+artifact_path: outputs/mlflow-model
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.9.23
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: pickle
+    sklearn_version: 1.5.1
+metadata:
+  azureml.base_image: mcr.microsoft.com/azureml/curated/ai-ml-automl:27
+  azureml.engine: automl
+mlflow_version: 2.15.1
+model_size_bytes: 295498
+model_uuid: d66224060eb947e48064ddd2418542de
+run_id: calm_office_f1r43m67bb_2
+signature:
+  inputs: '[{"type": "string", "name": "Patient Number", "required": true}, {"type":
+    "string", "name": "Sadness", "required": true}, {"type": "string", "name": "Euphoric",
+    "required": true}, {"type": "string", "name": "Exhausted", "required": true},
+    {"type": "string", "name": "Sleep dissorder", "required": true}, {"type": "boolean",
+    "name": "Mood Swing", "required": true}, {"type": "boolean", "name": "Suicidal
+    thoughts", "required": true}, {"type": "boolean", "name": "Anorxia", "required":
+    true}, {"type": "boolean", "name": "Authority Respect", "required": true}, {"type":
+    "boolean", "name": "Try-Explanation", "required": true}, {"type": "boolean", "name":
+    "Aggressive Response", "required": true}, {"type": "boolean", "name": "Ignore
+    & Move-On", "required": true}, {"type": "boolean", "name": "Nervous Break-down",
+    "required": true}, {"type": "boolean", "name": "Admit Mistakes", "required": true},
+    {"type": "boolean", "name": "Overthinking", "required": true}, {"type": "string",
+    "name": "Sexual Activity", "required": true}, {"type": "string", "name": "Concentration",
+    "required": true}, {"type": "string", "name": "Optimisim", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "str", "shape": [-1]}}]'
+  params: null
+utc_time_created: '2025-10-15 13:51:16.185491'
